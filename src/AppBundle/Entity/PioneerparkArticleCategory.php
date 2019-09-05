@@ -2,10 +2,12 @@
 
 namespace AppBundle\Entity;
 
+use AppBundle\Custom\Entry\AbsEntry;
+
 /**
  * PioneerparkArticleCategory
  */
-class PioneerparkArticleCategory
+class PioneerparkArticleCategory extends AbsEntry
 {
     /**
      * @var int

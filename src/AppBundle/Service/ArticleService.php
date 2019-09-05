@@ -8,6 +8,8 @@
 
 namespace AppBundle\Service;
 
+use Knp\Component\Pager\Paginator;
+
 class ArticleService extends AbsService
 {
     const MERCHANT = 'MERCHANT';
@@ -68,6 +70,70 @@ class ArticleService extends AbsService
             'total' => $total,
             'pageSize' => intval(ceil($total / $size))
         ];
+    }
+
+    /**
+     * 获取文章分类分页列表
+     * @param $type
+     * @param $search
+     * @param $page
+     * @param $size
+     * @return \Knp\Component\Pager\Pagination\PaginationInterface
+     */
+    public function getCategoryPageListByAdmin($type, $search, $page, $size)
+    {
+        $query = $this->getEm()->createQueryBuilder();
+        $query->select('a')
+            ->from('AppBundle:PioneerparkArticleCategory', 'a')
+            ->setFirstResult(($page - 1) * $size)
+            ->setMaxResults($size)
+            ->where('a.type = :type')
+            ->setParameter('type', $type)
+            ->orderBy('a.sort', 'asc');
+
+        if($search != '') {
+            $query->andWhere('a.title like :title')->setParameter('title', "%{$search}%");
+        }
+
+        /** @var Paginator $knp_paginator */
+        $knp_paginator = $this->get('knp_paginator');
+        $pagination = $knp_paginator->paginate($query, $page, $size);
+
+        return $pagination;
+    }
+
+    /**
+     * 获取文章分页列表
+     * @param $type
+     * @param $cate
+     * @param $search
+     * @param $page
+     * @param $size
+     * @return \Knp\Component\Pager\Pagination\PaginationInterface
+     */
+    public function getPageListByAdmin($type, $cate, $search, $page, $size)
+    {
+        $query = $this->getEm()->createQueryBuilder();
+        $query->select('a')
+            ->from('AppBundle:PioneerparkArticle', 'a')
+            ->setFirstResult(($page - 1) * $size)
+            ->setMaxResults($size)
+            ->where('a.type = :type')
+            ->setParameter('type', $type)
+            ->orderBy('a.createAt', 'desc');
+
+        if($search != '') {
+            $query->andWhere('a.title like :title')->setParameter('title', "%{$search}%");
+        }
+        if($cate != '') {
+            $query->andWhere('a.cate = :cate')->setParameter('cate', $cate);
+        }
+
+        /** @var Paginator $knp_paginator */
+        $knp_paginator = $this->get('knp_paginator');
+        $pagination = $knp_paginator->paginate($query, $page, $size);
+
+        return $pagination;
     }
 
     /**

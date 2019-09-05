@@ -1,9 +1,8 @@
-
 <li class="has-sub">
     <a href="#">
         <span class="title">公告</span>
     </a>
-    <ul >
+    <ul>
         <li>
             <a iframe href="{{ path('admin_notice_index') }}">
                 公告列表
@@ -13,9 +12,77 @@
 </li>
 <li class="has-sub">
     <a href="#">
+        <span class="title">商铺</span>
+    </a>
+    <ul>
+        <li>
+            <a iframe href="{{ path('admin_article', {type: 'MERCHANT'}) }}">
+                内容管理
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_article_category', {type: 'MERCHANT'}) }}">
+                分类管理
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">合作需求</span>
+    </a>
+    <ul>
+        <li>
+            <a iframe href="{{ path('admin_article', {type: 'COOPERATION'}) }}">
+                内容管理
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_article_category', {type: 'COOPERATION'}) }}">
+                分类管理
+            </a>
+        </li>
+    </ul>
+</li>
+{#<li class="has-sub">
+    <a href="#">
+        <span class="title">创业园简介</span>
+    </a>
+    <ul>
+        <li>
+            <a iframe href="{{ path('admin_article', {type: 'ABOUT'}) }}">
+                内容管理
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_article_category', {type: 'ABOUT'}) }}">
+                分类管理
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">合作交流专栏</span>
+    </a>
+    <ul>
+        <li>
+            <a iframe href="{{ path('admin_article', {type: 'SOUTHEAST'}) }}">
+                内容管理
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_article_category', {type: 'SOUTHEAST'}) }}">
+                分类管理
+            </a>
+        </li>
+    </ul>
+</li>#}
+<li class="has-sub">
+    <a href="#">
         <span class="title">动态</span>
     </a>
-    <ul >
+    <ul>
         <li>
             <a iframe href="{{ path('admin_dynamic_content_index') }}">
                 内容管理
@@ -32,7 +99,7 @@
     <a href="#">
         <span class="title">需求</span>
     </a>
-    <ul >
+    <ul>
         <li>
             <a iframe href="{{ path('admin_xuqiu_content') }}">
                 内容管理
@@ -54,7 +121,7 @@
     <a href="#">
         <span class="title">会议预约</span>
     </a>
-    <ul >
+    <ul>
         <li>
             <a iframe href="{{ path('admin_appointment_room_index') }}">
                 会议室
@@ -76,7 +143,7 @@
     <a href="#">
         <span class="title">商户管理</span>
     </a>
-    <ul >
+    <ul>
         <li>
             <a iframe href="{{ path('admin_merchant_index', { status: 0 }) }}">
                 待审核
@@ -98,7 +165,7 @@
     <a href="#">
         <span class="title">用户管理</span>
     </a>
-    <ul >
+    <ul>
         <li>
             <a iframe href="{{ path('admin_member_index') }}">
                 会员粉丝
@@ -110,7 +177,7 @@
     <a href="#">
         <span class="title">轮播管理</span>
     </a>
-    <ul >
+    <ul>
         <li>
             <a iframe href="{{ path('admin_swiper_index') }}">
                 轮播列表
@@ -122,11 +189,11 @@
     <a href="#">
         <span class="title">权限管理</span>
     </a>
-    <ul >
-            <li>
-                <a iframe href="{{ path('admin_manager_index') }}">
-                    管理员
-                </a>
-            </li>
+    <ul>
+        <li>
+            <a iframe href="{{ path('admin_manager_index') }}">
+                管理员
+            </a>
+        </li>
     </ul>
 </li>

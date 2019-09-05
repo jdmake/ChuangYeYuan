@@ -22,7 +22,20 @@
          * 弹出模态对话框
          */
         this.openModalPage = function (title, url, width, height) {
-            $('#popup').remove();
+            layer.open({
+                type: 2,
+                title: title || '&nbsp;',
+                shadeClose: true,
+                maxmin: true,
+                area: ['893px', '600px'],
+                content: url,
+                end: function () {
+                    if(typeof window.__popupCallback__ === "function") {
+                        window.__popupCallback__();
+                    }
+                }
+            });
+            /*$('#popup').remove();
             var modal = $('<div style="display: block" class="modal fade  in" id="modal-2" aria-hidden="false"><div class="modal-dialog" style="width: 80%;height: 80%;"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title"></h4></div><div class="modal-body"><iframe style="overflow-x: hidden" width="100%" height="100%" frameborder="0" scrolling="y" src=""></iframe></div></div></div></div> ');
             modal.find(".modal-body iframe").attr("src", url);
             modal.find(".modal-title").text(title);
@@ -40,7 +53,7 @@
                 if(typeof window.__popupCallback__ === "function") {
                     window.__popupCallback__();
                 }
-            });
+            });*/
 
         };
 
