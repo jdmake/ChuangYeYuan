@@ -1,0 +1,29 @@
+AppBundle\Entity\PioneerparkSetting:
+    type: entity
+    table: pioneerpark_setting
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        settingKey:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+            column: setting_key
+        settingValue:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+            column: setting_value
+    lifecycleCallbacks: {  }

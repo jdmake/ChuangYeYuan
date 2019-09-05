@@ -1,0 +1,58 @@
+AppBundle\Entity\PioneerparkComment:
+    type: entity
+    table: pioneerpark_comment
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 会员UID
+        fromid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 被评论id
+        fromcate:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: '类型 0. 文章模型  1. 动态 '
+        content:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                comment: 评论内容
+        zantotal:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 点赞次数
+        enable:
+            type: boolean
+            nullable: false
+            options:
+                comment: 是否可用
+                default: '0'
+        createAt:
+            type: datetime
+            nullable: false
+            options:
+                comment: 评论时间
+            column: create_at
+    lifecycleCallbacks: {  }

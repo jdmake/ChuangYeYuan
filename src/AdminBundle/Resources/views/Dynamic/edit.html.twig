@@ -1,0 +1,57 @@
+{% extends '@Admin/iframe_base.html.twig' %}
+{% block bodyStyle %}style="background: #efefef;"{% endblock %}
+{% block reload %}
+{% endblock %}
+{% block content %}
+    {% autoescape false %}
+        <title>内容审核</title>
+        <div class="panel panel-default" style="margin: 0 auto; width: 800px; padding: 20px">
+            <div class="panel-heading">
+                <h2>{{ entry.title }}
+                    {% if entry.status == 0 %}<span class="badge badge-default">待审核</span>{% endif %}
+                    {% if entry.status == 1 %}<span class="badge badge-success">已通过</span>{% endif %}
+                    {% if entry.status == 2 %}<span class="badge badge-pink">未通过</span>{% endif %}
+                </h2>
+
+                <br>
+                <br>
+                <span>动态分类：{{ cate }} |</span>
+                <span>企业：{{ merchant_name }}</span>
+            </div>
+            <div class="panel-body" style="line-height: 2.6;color: #000">
+                <div class="content">
+                    <h2>内容</h2>
+                    <hr>
+                    {{ entry.content }}
+                </div>
+                <hr>
+                <br>
+                <div class="picture">
+                    <h2>缩略图</h2>
+                    <hr>
+                    {% for p in entry.picture %}
+                        {{ p }}
+                    {% endfor %}
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <a class="btn btn-secondary btn-lg" href="{{ path('admin_dynamic_content_pass', { id: entry.id }) }}">通过</a>
+            <a class="btn btn-red btn-lg" href="{{ path('admin_dynamic_content_refuse', { id: entry.id }) }}">未通过</a>
+        </div>
+        <style>
+            .footer-nav {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255,255,255, 0.8);
+                border-top: solid 1px #dedede;
+                padding: 15px;
+                text-align: center;
+            }
+        </style>
+    {% endautoescape %}
+{% endblock %}
+

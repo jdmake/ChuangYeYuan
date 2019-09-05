@@ -1,0 +1,33 @@
+AppBundle\Entity\PioneerparkCommentZanrecord:
+    type: entity
+    table: pioneerpark_comment_zanrecord
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 点赞用户UID
+        commentid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 评论ID
+        createAt:
+            type: datetime
+            nullable: false
+            options:
+                comment: 点赞时间
+            column: create_at
+    lifecycleCallbacks: {  }

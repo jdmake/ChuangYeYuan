@@ -1,0 +1,62 @@
+AppBundle\Entity\PioneerparkRentOrder:
+    type: entity
+    table: pioneerpark_rent_order
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: uid
+        recordId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 记录ID
+            column: record_Id
+        orderNo:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 订单号码
+            column: order_no
+        total:
+            type: float
+            nullable: false
+            precision: 9
+            scale: 2
+            options:
+                comment: 总金额
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: '订单状态 0. 待支付  1. 已支付  2. 已过期'
+        payStatus:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: '支付状态 0.未支付  1. 已支付'
+            column: pay_status
+        createAt:
+            type: datetime
+            nullable: false
+            options:
+                comment: 创建时间
+            column: create_at
+    lifecycleCallbacks: {  }

@@ -1,0 +1,60 @@
+AppBundle\Entity\PioneerparkMemberProfile:
+    type: entity
+    table: pioneerpark_member_profile
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 自增ID
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        avatar:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+                comment: 头像
+        birthday:
+            type: datetime
+            nullable: true
+            options:
+                comment: 出生年月日
+        gender:
+            type: boolean
+            nullable: true
+            options:
+                comment: '性别 1男 2女'
+        idcard:
+            type: string
+            nullable: true
+            length: 32
+            options:
+                fixed: false
+                comment: 身份证号码
+        nickname:
+            type: string
+            nullable: true
+            length: 32
+            options:
+                fixed: false
+                comment: 昵称
+        realname:
+            type: string
+            nullable: true
+            length: 32
+            options:
+                fixed: false
+                comment: 真实姓名
+        city:
+            type: string
+            nullable: true
+            length: 32
+            options:
+                fixed: false
+                comment: 城市
+    lifecycleCallbacks: {  }

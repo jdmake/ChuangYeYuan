@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="32d9d118-376d-4021-9a78-cee54edd4f9f" name="pioneerpark.zoro.net.cn" url="http://pioneerpark.zoro.net.cn">
+        <fileTransfer host="pioneerpark.zoro.net.cn" port="22" rootFolder="/www/wwwroot/pioneerpark.zoro.net.cn" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

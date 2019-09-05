@@ -1,0 +1,61 @@
+AppBundle\Entity\PioneerparkAppointmentOrder:
+    type: entity
+    table: pioneerpark_appointment_order
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 用户UID
+        orderNo:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 订单号
+            column: order_no
+        recordId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 预约记录
+            column: record_id
+        total:
+            type: float
+            nullable: false
+            precision: 9
+            scale: 2
+            options:
+                comment: 支付金额
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 订单状态
+        payStatus:
+            type: boolean
+            nullable: false
+            options:
+                comment: 支付状态
+            column: pay_status
+        createAt:
+            type: datetime
+            nullable: false
+            options:
+                comment: 创建时间
+            column: create_at
+    lifecycleCallbacks: {  }

@@ -1,0 +1,74 @@
+AppBundle\Entity\PioneerparkMeetingroom:
+    type: entity
+    table: pioneerpark_meetingroom
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        picture:
+            type: string
+            nullable: false
+            length: 1000
+            options:
+                fixed: false
+        title:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 会议室名称
+        price:
+            type: float
+            nullable: false
+            precision: 9
+            scale: 2
+            options:
+                comment: 每小时收费
+        number:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 可供开会人数
+        content:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                comment: 会议室介绍
+        sort:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 排序
+        starttime:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 开始时间
+        endtime:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 结束时间
+        stepminute:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 间隔分钟
+    lifecycleCallbacks: {  }

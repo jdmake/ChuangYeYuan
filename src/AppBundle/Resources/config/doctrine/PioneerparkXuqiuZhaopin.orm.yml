@@ -1,0 +1,144 @@
+AppBundle\Entity\PioneerparkXuqiuZhaopin:
+    type: entity
+    table: pioneerpark_xuqiu_zhaopin
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        cate:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 分类ID
+                default: '0'
+        mid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 企业ID
+                default: '0'
+        uid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 发布人UID
+        title:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                comment: 标题
+        subtitle:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                comment: 副标题
+        tag:
+            type: string
+            nullable: false
+            length: 500
+            options:
+                fixed: false
+                comment: 标签
+        salarymin:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 最低薪水
+        salarymax:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 最高薪水
+        number:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 招聘人数
+        education:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 学历
+        experience:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 经验
+        duty:
+            type: string
+            nullable: false
+            length: 1000
+            options:
+                fixed: false
+                comment: 职责
+        seniority:
+            type: string
+            nullable: false
+            length: 1000
+            options:
+                fixed: false
+                comment: 资历
+        isquality:
+            type: boolean
+            nullable: false
+            options:
+                comment: 是否优质
+        isrecommend:
+            type: boolean
+            nullable: false
+            options:
+                comment: 是否推荐
+        contacts:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 联系人
+        tel:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 联系电话
+        visit:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 访问次数
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: '状态 0.审核中 1.审核通过 2.审核不通过'
+        createAt:
+            type: datetime
+            nullable: false
+            options:
+                comment: 发布时间
+            column: create_at
+    lifecycleCallbacks: {  }

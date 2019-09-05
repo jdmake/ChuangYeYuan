@@ -1,0 +1,46 @@
+AppBundle\Entity\PioneerparkSwiper:
+    type: entity
+    table: pioneerpark_swiper
+    id:
+        swiperId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 轮播图id
+            id: true
+            column: swiper_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        swiperType:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                comment: 类型
+            column: swiper_type
+        swiperSort:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                comment: 排序
+            column: swiper_sort
+        swiperPicture:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+                comment: 轮播图
+            column: swiper_picture
+        swiperPath:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+                comment: 轮播图链接
+            column: swiper_path
+    lifecycleCallbacks: {  }

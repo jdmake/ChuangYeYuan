@@ -1,0 +1,89 @@
+AppBundle\Entity\PioneerparkMember:
+    type: entity
+    table: pioneerpark_member
+    id:
+        uid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 用户UID
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        isenterprise:
+            type: boolean
+            nullable: false
+            options:
+                comment: 是否是企业用户
+        openid:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 微信openid
+        formid:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+                comment: 推送码
+        mobile:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 手机号码
+        level:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 会员等级
+                default: '1'
+        parentid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 推荐人uid
+        credit:
+            type: float
+            nullable: false
+            precision: 9
+            scale: 2
+            options:
+                comment: 余额
+        lastloginip:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 上一次登录IP
+        lastlogintime:
+            type: datetime
+            nullable: true
+            options:
+                comment: 上一次登录时间
+        profileid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 用户资料ID
+        regtime:
+            type: datetime
+            nullable: false
+            options:
+                comment: 注册时间
+        enable:
+            type: boolean
+            nullable: false
+            options:
+                comment: 是否可用
+    lifecycleCallbacks: {  }

@@ -1,0 +1,34 @@
+AppBundle\Entity\PioneerparkXuqiuCategory:
+    type: entity
+    table: pioneerpark_xuqiu_category
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 标题
+        model:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 模型
+        sort:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 排序
+    lifecycleCallbacks: {  }

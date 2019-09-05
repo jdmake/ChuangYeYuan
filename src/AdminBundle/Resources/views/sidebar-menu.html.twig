@@ -1,0 +1,132 @@
+
+<li class="has-sub">
+    <a href="#">
+        <span class="title">公告</span>
+    </a>
+    <ul >
+        <li>
+            <a iframe href="{{ path('admin_notice_index') }}">
+                公告列表
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">动态</span>
+    </a>
+    <ul >
+        <li>
+            <a iframe href="{{ path('admin_dynamic_content_index') }}">
+                内容管理
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_dynamic_index') }}">
+                分类管理
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">需求</span>
+    </a>
+    <ul >
+        <li>
+            <a iframe href="{{ path('admin_xuqiu_content') }}">
+                内容管理
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_xuqiu_category_index') }}">
+                分类管理
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a iframe href="{{ path('admin_comment_index') }}">
+        <span class="title">评论管理</span>
+    </a>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">会议预约</span>
+    </a>
+    <ul >
+        <li>
+            <a iframe href="{{ path('admin_appointment_room_index') }}">
+                会议室
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_appointment_meeting_index') }}">
+                预约管理
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_appointment_TailMoney') }}">
+                会议尾款
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">商户管理</span>
+    </a>
+    <ul >
+        <li>
+            <a iframe href="{{ path('admin_merchant_index', { status: 0 }) }}">
+                待审核
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_merchant_index', { status: 1 }) }}">
+                商户列表
+            </a>
+        </li>
+        <li>
+            <a iframe href="{{ path('admin_merchant_rent_index') }}">
+                租金缴纳
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">用户管理</span>
+    </a>
+    <ul >
+        <li>
+            <a iframe href="{{ path('admin_member_index') }}">
+                会员粉丝
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">轮播管理</span>
+    </a>
+    <ul >
+        <li>
+            <a iframe href="{{ path('admin_swiper_index') }}">
+                轮播列表
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-sub">
+    <a href="#">
+        <span class="title">权限管理</span>
+    </a>
+    <ul >
+            <li>
+                <a iframe href="{{ path('admin_manager_index') }}">
+                    管理员
+                </a>
+            </li>
+    </ul>
+</li>

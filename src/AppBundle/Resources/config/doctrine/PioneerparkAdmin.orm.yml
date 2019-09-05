@@ -1,0 +1,50 @@
+AppBundle\Entity\PioneerparkAdmin:
+    type: entity
+    table: pioneerpark_admin
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        username:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 用户
+                default: '0'
+        psw:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+                comment: 密码
+        roleId:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                comment: 角色组ID
+            column: role_id
+        status:
+            type: boolean
+            nullable: false
+            options:
+                comment: '状态 1.可用 2.不可用'
+                default: '1'
+        createTime:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 创建时间
+                default: '0'
+            column: create_time
+    lifecycleCallbacks: {  }

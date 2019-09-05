@@ -1,0 +1,34 @@
+AppBundle\Entity\PioneerparkArticleCategory:
+    type: entity
+    table: pioneerpark_article_category
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                comment: 分类标题
+        type:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                comment: "type 属性 商户 MERCHANT 东南亚专题 SOUTHEAST 合作需求 COOPERATION\t"
+        sort:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 排序
+    lifecycleCallbacks: {  }

@@ -1,0 +1,98 @@
+AppBundle\Entity\PioneerparkMerchant:
+    type: entity
+    table: pioneerpark_merchant
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 会员UID
+        name:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 企业名称
+        creditcode:
+            type: string
+            nullable: false
+            length: 128
+            options:
+                fixed: false
+                comment: 信用代码
+            column: creditCode
+        contacts:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 联系人
+        tel:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 联系电话
+        scope:
+            type: string
+            nullable: false
+            length: 1000
+            options:
+                fixed: false
+                comment: 经营范围
+        monthlyrent:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 租多久/月
+            column: monthlyRent
+        startingtime:
+            type: datetime
+            nullable: false
+            options:
+                comment: 起租时间
+            column: startingTime
+        licensepic:
+            type: string
+            nullable: false
+            length: 1000
+            options:
+                fixed: false
+                comment: 营业执照
+            column: licensePic
+        logopic:
+            type: string
+            nullable: false
+            length: 1000
+            options:
+                fixed: false
+                comment: 公司logo
+            column: logoPic
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: '审核状态 0.审核中 1.审核通过 2.审核未通过'
+        createAt:
+            type: datetime
+            nullable: false
+            options:
+                comment: 申请时间
+            column: create_at
+    lifecycleCallbacks: {  }

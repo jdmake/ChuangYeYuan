@@ -1,0 +1,53 @@
+AppBundle\Entity\PioneerparkAppointmentRecord:
+    type: entity
+    table: pioneerpark_appointment_record
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: id
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        rid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 会议室ID
+        uid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 会员UID
+        date:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+                comment: 日期
+        time:
+            type: string
+            nullable: false
+            length: 1000
+            options:
+                fixed: false
+                comment: 时段
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: '状态 0. 待支付  1. 已支付  2. 已完成 3. 已失效'
+        createAt:
+            type: datetime
+            nullable: false
+            options:
+                comment: 创建时间
+            column: create_at
+    lifecycleCallbacks: {  }
