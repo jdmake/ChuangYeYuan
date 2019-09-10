@@ -25,6 +25,40 @@ AppBundle\Entity\PioneerparkMerchant:
             options:
                 fixed: false
                 comment: 企业名称
+        jointime:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                comment: 入园时间
+        capital:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                comment: 注册资本
+        legal:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                comment: 法定代表人
+        staffcount:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                comment: 员工人数
+        needsarea:
+            type: string
+            nullable: false
+            length: 125
+            options:
+                fixed: false
+                comment: 需求面积
         creditcode:
             type: string
             nullable: false

@@ -63,6 +63,7 @@ class ArticleService extends AbsService
 
         foreach ($list as &$item) {
             $item['createAt'] = $item['createAt']->format('Y-m-d H:i');
+            $item['content'] = strip_tags($item['content']);
         }
 
         return [

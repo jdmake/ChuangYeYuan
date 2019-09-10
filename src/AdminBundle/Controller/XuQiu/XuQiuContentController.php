@@ -15,6 +15,7 @@ use Doctrine\ORM\QueryBuilder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use YuZhi\TableingBundle\Tableing\Components\Enable;
+use YuZhi\TableingBundle\Tableing\Components\Enumeration;
 use YuZhi\TableingBundle\Tableing\Components\Image;
 use YuZhi\TableingBundle\Tableing\Components\LinkButton;
 use YuZhi\TableingBundle\Tableing\Components\Remark;
@@ -65,7 +66,9 @@ class XuQiuContentController extends AbsController
                 'popup' => true,
             ]))
             ->add('id', '编号')
-            ->add('cate', '分类')
+            ->add('cate', '分类', [
+                'type' => new Enumeration($cates)
+            ])
             ->add('thumbnail', '缩略图', [
                 'type' => new Image()
             ])

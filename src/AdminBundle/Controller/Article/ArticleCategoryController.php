@@ -38,7 +38,7 @@ class ArticleCategoryController extends AbsController
             ->addTopSearch('username', '输入分类名称进行搜索', '/admin/article/category')
             ->addTopButton(new LinkButton([
                 'title' => ' + 添加分类',
-                'url' => '/admin/article/category/edit',
+                'url' => '/admin/article/category/edit?type=' . $type,
                 'popup' => true,
             ]))
             ->add('id', '编号')
@@ -71,6 +71,7 @@ class ArticleCategoryController extends AbsController
     public function editAction()
     {
         $id = $this->request()->get('id', 0);
+        $type = $this->request()->get('type');
 
         /** @var PioneerparkArticleCategory $entry */
         $entry = $this->get('category_service')->findById('AppBundle:PioneerparkArticleCategory', $id);
@@ -100,7 +101,7 @@ class ArticleCategoryController extends AbsController
                 $entry = new PioneerparkArticleCategory();
                 $entry->setTitle($data['title']);
                 $entry->setSort($data['sort']);
-                $entry->setType(ArticleService::MERCHANT);
+                $entry->setType($type);
                 $this->getDoctrine()->getManager()->persist($entry);
                 $this->getDoctrine()->getManager()->flush();
                 return $this->success('添加成功', 1);

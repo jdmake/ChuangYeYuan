@@ -137,7 +137,7 @@ class ArticleController extends AbsController
                 $entry->setType($type);
                 $entry->setCate($data['cate']);
                 $entry->setTitle($data['title']);
-                $entry->setSubtitle($data['subtitle']);
+                $entry->setSubtitle(isset($data['subtitle']) ? $data['subtitle'] : '');
                 $entry->setThumbnail($data['thumbnail']);
                 $entry->setContent($data['content']);
                 $entry->setIsdisplay(true);

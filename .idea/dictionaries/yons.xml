@@ -8,14 +8,17 @@
       <w>fileupload</w>
       <w>isenterprise</w>
       <w>isquality</w>
+      <w>jointime</w>
       <w>maxmin</w>
       <w>meetingrooms</w>
+      <w>needsarea</w>
       <w>nopass</w>
       <w>pioneerpark</w>
       <w>profileid</w>
       <w>regtime</w>
       <w>salarymax</w>
       <w>salarymin</w>
+      <w>staffcount</w>
       <w>swiper</w>
       <w>tableing</w>
       <w>ueditor</w>

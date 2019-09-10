@@ -80,6 +80,13 @@ class MerchantService extends AbsService
         $entry->setStartingTime(new \DateTime($data['startingTime']));
         $entry->setTel($data['tel']);
         $entry->setUid($uid);
+
+        $entry->setJointime($data['jointime']);
+        $entry->setCapital($data['capital']);
+        $entry->setLegal($data['legal']);
+        $entry->setStaffcount($data['staffcount']);
+        $entry->setNeedsarea($data['needsarea']);
+
         $entry->setStatus(0);
         $entry->setCreateAt(new \DateTime());
 

@@ -70,6 +70,12 @@ class MerchantController extends CommonController
         $startingTime = $this->getJsonParameter('startingTime');
         $tel = $this->getJsonParameter('tel');
 
+        $jointime = $this->getJsonParameter('jointime');
+        $capital = $this->getJsonParameter('capital');
+        $legal = $this->getJsonParameter('legal');
+        $staffcount = $this->getJsonParameter('staffcount');
+        $needsarea = $this->getJsonParameter('needsarea');
+
         $data = [
             'contacts' => $contacts,
             'creditCode' => $creditCode,
@@ -80,17 +86,24 @@ class MerchantController extends CommonController
             'scope' => $scope,
             'startingTime' => $startingTime,
             'tel' => $tel,
+            'jointime' => $jointime,
+            'capital' => $capital,
+            'legal' => $legal,
+            'staffcount' => $staffcount,
+            'needsarea' => $needsarea,
         ];
 
         $error = $this->validator($data, [
             'contacts' => new NotBlank(['message' => '联系人不能为空']),
-            'creditCode' => new NotBlank(['message' => '信用代码不能为空']),
+            'jointime' => new NotBlank(['message' => '入园时间不能为空']),
             'licensePic' => new NotBlank(['message' => '请上传营业执照']),
             'logoPic' => new NotBlank(['message' => '请上传公司logo']),
             'name' => new NotBlank(['message' => '企业名称不能为空']),
-            'scope' => new NotBlank(['message' => '经营范围不能为空']),
-            'startingTime' => new NotBlank(['message' => '起租时间不能为空']),
+            'scope' => new NotBlank(['message' => '主营业务不能为空']),
+            'legal' => new NotBlank(['message' => '法定代表人不能为空']),
             'tel' => new NotBlank(['message' => '联系电话不能为空']),
+            'staffcount' => new NotBlank(['message' => '员工人数不能为空']),
+            'needsarea' => new NotBlank(['message' => '面积需求不能为空']),
         ]);
 
         if (count($error) > 0) {

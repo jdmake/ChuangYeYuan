@@ -372,4 +372,149 @@ class PioneerparkMerchant extends AbsEntry
     {
         return $this->id;
     }
+    /**
+     * @var string
+     */
+    private $jointime;
+
+    /**
+     * @var string
+     */
+    private $capital;
+
+    /**
+     * @var string
+     */
+    private $legal;
+
+    /**
+     * @var int
+     */
+    private $staffcount;
+
+    /**
+     * @var string
+     */
+    private $needsarea;
+
+
+    /**
+     * Set jointime.
+     *
+     * @param string $jointime
+     *
+     * @return PioneerparkMerchant
+     */
+    public function setJointime($jointime)
+    {
+        $this->jointime = $jointime;
+
+        return $this;
+    }
+
+    /**
+     * Get jointime.
+     *
+     * @return string
+     */
+    public function getJointime()
+    {
+        return $this->jointime;
+    }
+
+    /**
+     * Set capital.
+     *
+     * @param string $capital
+     *
+     * @return PioneerparkMerchant
+     */
+    public function setCapital($capital)
+    {
+        $this->capital = $capital;
+
+        return $this;
+    }
+
+    /**
+     * Get capital.
+     *
+     * @return string
+     */
+    public function getCapital()
+    {
+        return $this->capital;
+    }
+
+    /**
+     * Set legal.
+     *
+     * @param string $legal
+     *
+     * @return PioneerparkMerchant
+     */
+    public function setLegal($legal)
+    {
+        $this->legal = $legal;
+
+        return $this;
+    }
+
+    /**
+     * Get legal.
+     *
+     * @return string
+     */
+    public function getLegal()
+    {
+        return $this->legal;
+    }
+
+    /**
+     * Set staffcount.
+     *
+     * @param int $staffcount
+     *
+     * @return PioneerparkMerchant
+     */
+    public function setStaffcount($staffcount)
+    {
+        $this->staffcount = $staffcount;
+
+        return $this;
+    }
+
+    /**
+     * Get staffcount.
+     *
+     * @return int
+     */
+    public function getStaffcount()
+    {
+        return $this->staffcount;
+    }
+
+    /**
+     * Set needsarea.
+     *
+     * @param string $needsarea
+     *
+     * @return PioneerparkMerchant
+     */
+    public function setNeedsarea($needsarea)
+    {
+        $this->needsarea = $needsarea;
+
+        return $this;
+    }
+
+    /**
+     * Get needsarea.
+     *
+     * @return string
+     */
+    public function getNeedsarea()
+    {
+        return $this->needsarea;
+    }
 }

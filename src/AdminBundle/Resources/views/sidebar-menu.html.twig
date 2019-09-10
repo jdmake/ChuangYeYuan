@@ -16,12 +16,12 @@
     </a>
     <ul>
         <li>
-            <a iframe href="{{ path('admin_article', {type: 'MERCHANT'}) }}">
+            <a iframe data-title="商铺内容列表" href="{{ path('admin_article', {type: 'MERCHANT'}) }}">
                 内容管理
             </a>
         </li>
         <li>
-            <a iframe href="{{ path('admin_article_category', {type: 'MERCHANT'}) }}">
+            <a iframe data-title="商铺分类管理" href="{{ path('admin_article_category', {type: 'MERCHANT'}) }}">
                 分类管理
             </a>
         </li>
@@ -33,29 +33,29 @@
     </a>
     <ul>
         <li>
-            <a iframe href="{{ path('admin_article', {type: 'COOPERATION'}) }}">
+            <a iframe data-title="合作需求内容列表" href="{{ path('admin_article', {type: 'COOPERATION'}) }}">
                 内容管理
             </a>
         </li>
         <li>
-            <a iframe href="{{ path('admin_article_category', {type: 'COOPERATION'}) }}">
+            <a iframe data-title="合作需求分类管理" href="{{ path('admin_article_category', {type: 'COOPERATION'}) }}">
                 分类管理
             </a>
         </li>
     </ul>
 </li>
-{#<li class="has-sub">
+<li class="has-sub">
     <a href="#">
         <span class="title">创业园简介</span>
     </a>
     <ul>
         <li>
-            <a iframe href="{{ path('admin_article', {type: 'ABOUT'}) }}">
+            <a iframe data-title="创业园简介内容列表" href="{{ path('admin_article', {type: 'ABOUT'}) }}">
                 内容管理
             </a>
         </li>
         <li>
-            <a iframe href="{{ path('admin_article_category', {type: 'ABOUT'}) }}">
+            <a iframe data-title="创业园简介分类管理" href="{{ path('admin_article_category', {type: 'ABOUT'}) }}">
                 分类管理
             </a>
         </li>
@@ -67,17 +67,17 @@
     </a>
     <ul>
         <li>
-            <a iframe href="{{ path('admin_article', {type: 'SOUTHEAST'}) }}">
+            <a iframe data-title="合作交流专栏内容列表" href="{{ path('admin_article', {type: 'SOUTHEAST'}) }}">
                 内容管理
             </a>
         </li>
         <li>
-            <a iframe href="{{ path('admin_article_category', {type: 'SOUTHEAST'}) }}">
+            <a iframe data-title="合作交流专栏分类管理" href="{{ path('admin_article_category', {type: 'SOUTHEAST'}) }}">
                 分类管理
             </a>
         </li>
     </ul>
-</li>#}
+</li>
 <li class="has-sub">
     <a href="#">
         <span class="title">动态</span>
